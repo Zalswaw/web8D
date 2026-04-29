@@ -1,4 +1,147 @@
-<section class="container">
-  <h2>Kontak</h2>
-  <p>Isi oleh Orang 6</p>
-</section>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kakangkung</title>
+    <style>
+        /* Dasar & Background */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            /* Efek bercak putih smooth menggunakan radial gradient */
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 30%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.07) 0%, transparent 25%),
+                radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.04) 0%, transparent 20%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Kartu Kontak */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Item List */
+        .contact-item {
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #666;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .value {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover Effects */
+        .contact-item:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-item:hover .value {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Garis Pemisah */
+        .hr {
+            height: 1px;
+            width: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 auto 20px;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="contact-card">
+        <h1>Connect</h1>
+
+        <div class="contact-item">
+            <a href="tel:0101010101">
+                <span class="label">WhatsApp / Phone</span>
+                <span class="value">0101010101</span>
+            </a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="contact-item">
+            <a href="mailto:kakangkung@amba.com">
+                <span class="label">Email</span>
+                <span class="value">kakangkung@amba.com</span>
+            </a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="contact-item">
+            <a href="https://instagram.com/kakangkuuung10" target="_blank">
+                <span class="label">Instagram</span>
+                <span class="value">@kakangkuuung10</span>
+            </a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="contact-item">
+            <a href="https://tiktok.com/@ambatakam" target="_blank">
+                <span class="label">TikTok</span>
+                <span class="value">@ambatakam</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
