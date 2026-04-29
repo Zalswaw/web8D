@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Tim</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header"></div>
+
+  <!-- HERO -->
+  <div id="hero"></div>
+
+  <!-- ABOUT -->
+  <div id="about"></div>
+
+  <!-- SERVICES -->
+  <div id="services"></div>
+
+  <!-- TEAM -->
+  <div id="team"></div>
+
+  <!-- CONTACT -->
+  <div id="contact"></div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <script>
+    function loadSection(id, file) {
+      fetch("sections/" + file)
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+        });
+    }
+
+    loadSection("header", "header.html");
+    loadSection("hero", "hero.html");
+    loadSection("about", "about.html");
+    loadSection("services", "services.html");
+    loadSection("team", "team.html");
+    loadSection("contact", "contact.html");
+    loadSection("footer", "footer.html");
+  </script>
+
+</body>
+</html>
