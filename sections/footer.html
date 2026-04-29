@@ -1,5 +1,282 @@
-<footer>
-  <section class="container">
-    <p>© 2026 Tim Website</p>
-  </section>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Portofolio Kelas</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #e8f5e9;
+      display: flex;
+      align-items: flex-end;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .pf-footer {
+      font-family: 'DM Sans', sans-serif;
+      background: #f0f7f0;
+      color: #3a5a3a;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .pf-top-band {
+      background: #dceedd;
+      padding: 2rem 2.5rem 1.5rem;
+      border-bottom: 1px solid #c3ddc4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .pf-brand { display: flex; align-items: center; gap: 12px; }
+
+    .pf-logo {
+      width: 40px; height: 40px;
+      background: #6abf6a;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .pf-logo svg { width: 22px; height: 22px; }
+
+    .pf-brand-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px; color: #2a4a2a; line-height: 1;
+    }
+
+    .pf-brand-sub {
+      font-size: 12px; color: #5a8a5a; font-weight: 300;
+      margin-top: 3px; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    .pf-tagline {
+      font-size: 13px; color: #6a9a6a; font-weight: 300;
+      font-style: italic; max-width: 260px; text-align: right; line-height: 1.5;
+    }
+
+    .pf-badge {
+      background: #e2f2e2; border: 1px solid #b8d8b8;
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 11px; color: #4a7a4a;
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+
+    .pf-badge-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #6abf6a;
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+    }
+
+    .pf-main {
+      padding: 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .pf-col-title {
+      font-size: 11px; font-weight: 500; color: #5aaa5a;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #c3ddc4; padding-bottom: 8px;
+    }
+
+    .pf-about p {
+      font-size: 13px; color: #5a7a5a; line-height: 1.8; font-weight: 300;
+    }
+
+    .pf-stats { display: flex; gap: 1rem; margin-top: 1.2rem; }
+
+    .pf-stat {
+      background: #dceedd; border: 1px solid #c3ddc4;
+      border-radius: 8px; padding: 8px 14px; text-align: center;
+    }
+
+    .pf-stat-num {
+      font-size: 18px; font-weight: 500; color: #3a8a3a;
+      font-family: 'DM Serif Display', serif; line-height: 1;
+    }
+
+    .pf-stat-lbl { font-size: 10px; color: #6a8a6a; margin-top: 4px; letter-spacing: 0.05em; }
+
+    .pf-links { list-style: none; padding: 0; margin: 0; }
+    .pf-links li { margin-bottom: 10px; }
+    .pf-links a {
+      font-size: 13px; color: #5a7a5a; text-decoration: none;
+      font-weight: 300; display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s;
+    }
+    .pf-links a:hover { color: #3a8a3a; }
+    .pf-links a::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%;
+      background: #a8d5a8; flex-shrink: 0;
+    }
+
+    .pf-contact-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px; }
+
+    .pf-contact-icon {
+      width: 26px; height: 26px;
+      background: #dceedd; border: 1px solid #c3ddc4;
+      border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    .pf-contact-icon svg { width: 12px; height: 12px; stroke: #6abf6a; fill: none; stroke-width: 2; }
+
+    .pf-contact-text { font-size: 12px; color: #5a7a5a; font-weight: 300; line-height: 1.5; }
+
+    .pf-divider { border: none; border-top: 1px solid #dceedd; margin: 0; }
+
+    .pf-bottom {
+      padding: 1rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.8rem;
+    }
+
+    .pf-copy { font-size: 12px; color: #7aaa7a; font-weight: 300; }
+
+    .pf-socials { display: flex; gap: 8px; }
+
+    .pf-soc-btn {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: #dceedd; border: 1px solid #c3ddc4;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.2s, border-color 0.2s;
+    }
+
+    .pf-soc-btn:hover { background: #c3ddc4; border-color: #6abf6a; }
+    .pf-soc-btn svg { width: 13px; height: 13px; fill: #6a9a6a; }
+
+    @media (max-width: 640px) {
+      .pf-main { grid-template-columns: 1fr 1fr; }
+      .pf-tagline { text-align: left; }
+    }
+
+    @media (max-width: 420px) {
+      .pf-main { grid-template-columns: 1fr; }
+      .pf-top-band { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<footer class="pf-footer">
+  <!-- Top Band -->
+  <div class="pf-top-band">
+    <div class="pf-brand">
+      <div class="pf-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="pf-brand-name">Kelas 8D </div>
+        <div class="pf-brand-sub">SMP IDN Boarding School · 2026</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+      <div class="pf-badge">
+        <div class="pf-badge-dot"></div>
+        Tahun Ajaran 2026/2027
+      </div>
+      <div class="pf-tagline">Jagoan IT Pintenr ngaji, Muda Mendunia.</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="pf-main">
+
+    <!-- Tentang Kami -->
+    <div class="pf-about">
+      <div class="pf-col-title">Tentang Kami</div>
+      <p>IDN Boarding School Jonggol adalah sekolah berbasis pesantren dan teknologi informasi di bawah Yayasan Islamic Development Network. Berlokasi di Jl. Raya Dayeuh, Sukanegara, Jonggol, Bogor, IDN mencetak generasi muda yang Jago IT, Pinter Ngaji, dan siap bersaing di tingkat nasional maupun internasional.</p>
+      <div class="pf-stats">
+        <div class="pf-stat">
+          <div class="pf-stat-num">32</div>
+          <div class="pf-stat-lbl">Siswa</div>
+        </div>
+        <div class="pf-stat">
+          <div class="pf-stat-num">85</div>
+          <div class="pf-stat-lbl">Proyek</div>
+        </div>
+        <div class="pf-stat">
+          <div class="pf-stat-num">28</div>
+          <div class="pf-stat-lbl">Prestasi</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigasi -->
+    <div>
+      <div class="pf-col-title">Navigasi</div>
+      <ul class="pf-links">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Profil Kelas</a></li>
+        <li><a href="#">Galeri Karya</a></li>
+        <li><a href="#">Kegiatan</a></li>
+        <li><a href="#">Prestasi</a></li>
+        <li><a href="#">Blog Siswa</a></li>
+      </ul>
+    </div>
+
+    <!-- Kontak -->
+    <div>
+      <div class="pf-col-title">Kontak</div>
+      <div class="pf-contact-item">
+        <div class="pf-contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="pf-contact-text">Jl. Raya Jonggol-Dayeuh, Sukanegara, Kec. Jonggol, Kabupaten Bogor, Jawa Barat 16830</div>
+      </div>
+      <div class="pf-contact-item">
+        <div class="pf-contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="pf-contact-text">kelas8D@idn.sch.id</div>
+      </div>
+      <div class="pf-contact-item">
+        <div class="pf-contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </div>
+        <div class="pf-contact-text">SMPIDNBoardingSchool-8D@gmail.com</div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="pf-divider">
+
+  <!-- Bottom Bar -->
+  <div class="pf-bottom">
+    <div class="pf-copy">© 2026 SMP KELASSS 8D · SMP IDN Boarding School. Dibuat dengan semangat bersama.</div>
+    <div class="pf-socials">
+      <div class="pf-soc-btn" title="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </div>
+      <div class="pf-soc-btn" title="Twitter / X">
+        <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+      </div>
+      <div class="pf-soc-btn" title="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+      </div>
+      <div class="pf-soc-btn" title="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </div>
+    </div>
+  </div>
 </footer>
+
+</body>
+</html>
